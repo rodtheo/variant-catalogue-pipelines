@@ -20,7 +20,7 @@ $ aws s3 --no-sign-request cp s3://ngi-igenomes/igenomes/Homo_sapiens/GATK/GRCh3
 ```
 https://annotation-cache.github.io/vep_cache/
 ```
-3. Samples to call variants: as it's a test dataset, we extracted on-the-fly the reads mapped to chromossome 12, X and Y from BAM files of GIAB NA24694, NA12878 and NA24385. After the BAM subset we convert it to paired-end fastq. This was done with:
+3. Samples to call variants: as it's a test dataset, we extracted on-the-fly the reads mapped to locations 10,000,000 to 20,000,000 of chromossomes 12, X and Y from BAM files of GIAB NA24694, NA12878 and NA24385. After the BAM subset we convert it to paired-end fastq. This was done with:
 
 First, create the following BED named `include_regions.bed`:
 
