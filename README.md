@@ -52,3 +52,28 @@ $ samtools view --threads 4 -h -L include_regions_chr.bed --use-index s3://giab/
 
 $ bedtools bamtofastq -i test_sorted_NA24385.bam -fq NA24385.R1.fastq -fq2 NA24385.R2.fastq
 ```
+
+## Pipelines Execution
+
+### Sarek
+
+```
+git clone
+
+cd 
+
+nextflow run . -params-file params.yaml -profile docker --max_cpus 6 --max_memory 12GB
+```
+
+Where custom parameters can be found at `sarek/params.yaml`.
+
+### Variant Catalogue
+
+
+```
+git clone
+
+cd
+
+nextflow run . --input assets/local_samplesheet.csv -c conf/test_local.conf -profile docker --outdir test_out_local -resume --cache_path /home/rodtheo/Bioinfo/project-data/nextflow/sarek/data/ref/vep_cache --cache_version 110
+```
