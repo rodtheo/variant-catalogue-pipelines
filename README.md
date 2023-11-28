@@ -10,7 +10,7 @@ The following pipelines were compared:
 
 ## Dataset
 
-The test data used in this experiment was downloaded from public repositories. In order to accelerate the download rate we priorize the download of files stored in aws cloud buckets. The downloads were done using aws-cli tool.
+The test data used in this experiment was downloaded from public repositories. In order to accelerate the download rate we priorize the download of files stored in aws cloud buckets. The downloads were done using aws-cli tool. Please download the following files into a `data/` dir inside this repo's root directory.
 
 1. Human Reference Genome (GRCh38) from GATK Bundle.
 ```
@@ -55,25 +55,29 @@ $ bedtools bamtofastq -i test_sorted_NA24385.bam -fq NA24385.R1.fastq -fq2 NA243
 
 ## Pipelines Execution
 
+```
+$ git clone https://github.com/rodtheo/variant-catalogue-pipelines
+
+$ git submodule init
+
+$ git submodule update
+```
+
 ### Sarek
 
 ```
-git clone
+$ cd sarek 
 
-cd 
-
-nextflow run . -params-file params.yaml -profile docker --max_cpus 6 --max_memory 12GB
+$ nextflow run . -params-file ../sarek_conf/params.yaml -profile docker --max_cpus 6 --max_memory 12GB
 ```
 
-Where custom parameters can be found at `sarek/params.yaml`.
+Where custom parameters can be found at `sarek_conf/params.yaml`.
 
 ### Variant Catalogue
 
 
 ```
-git clone
+$ cd variantcatalogue
 
-cd
-
-nextflow run . --input assets/local_samplesheet.csv -c conf/test_local.conf -profile docker --outdir test_out_local -resume --cache_path /home/rodtheo/Bioinfo/project-data/nextflow/sarek/data/ref/vep_cache --cache_version 110
+$ nextflow run . --input ../variantcatalogue_conf/local_samplesheet.csv -c ../variantcatalogue_conf/test_local.conf -profile docker --outdir test_out_local -resume --cache_path ../data/ref/vep_cache --cache_version 110
 ```
