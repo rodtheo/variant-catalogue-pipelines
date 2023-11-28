@@ -1,0 +1,4 @@
+sample,fastq_1,fastq_2
+NA12878,/home/rodtheo/Bioinfo/project-data/learn/genomics-in-the-cloud/data/germline/bams/mother.R1.fastq.gz,/home/rodtheo/Bioinfo/project-data/learn/genomics-in-the-cloud/data/germline/bams/mother.R2.fastq.gz
+NA24385,/home/rodtheo/Bioinfo/project-data/learn/genomics-in-the-cloud/data/germline/bams/NA24385.R1.fastq.gz,/home/rodtheo/Bioinfo/project-data/learn/genomics-in-the-cloud/data/germline/bams/NA24385.R2.fastq.gz
+NA24694,/home/rodtheo/Bioinfo/project-data/learn/genomics-in-the-cloud/data/germline/bams/NA24694.R1.fastq.gz,/home/rodtheo/Bioinfo/project-data/learn/genomics-in-the-cloud/data/germline/bams/NA24694.R2.fastq.gz
