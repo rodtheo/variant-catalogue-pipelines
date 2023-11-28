@@ -1,0 +1,6 @@
+[submodule "sarek"]
+	path = sarek
+	url = https://github.com/nf-core/sarek.git
+[submodule "variantcatalogue"]
+	path = variantcatalogue
+	url = https://github.com/nf-core/variantcatalogue.git
